@@ -1,0 +1,168 @@
+/* Aturan Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Ganti dengan font yang sesuai (misalnya, Montserrat atau Playfair Display) */
+    background-color: #0b172a; /* Warna latar belakang gelap kebiruan */
+    color: #f0f0f0;
+}
+
+/* --- TOP BAR (Jadwal & Alamat) --- */
+.top-bar {
+    background-color: #0b172a;
+    color: #aaa;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: right;
+    /* Membuat elemen sejajar dan rapi, mirip dengan tangkapan layar */
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.address {
+    margin-right: 20px; /* Jarak tambahan dari tepi kanan */
+}
+
+/* --- MAIN NAVIGATION (Logo & Menu) --- */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+.logo p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin-top: -5px;
+}
+
+/* Bintang di samping Logo */
+.star {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #c7923e; /* Warna emas */
+    position: relative;
+    transform: rotate(45deg);
+}
+.star::before, .star::after {
+    content: '';
+    position: absolute;
+    background-color: #c7923e;
+}
+.star::before {
+    width: 10px;
+    height: 1px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%) rotate(-45deg);
+}
+.star::after {
+    width: 1px;
+    height: 10px;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Menu Toggle Styling */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.menu-toggle i {
+    font-size: 20px;
+    color: #f0f0f0;
+}
+
+/* --- HERO GRID (4 Gambar) --- */
+.hero-grid {
+    display: grid;
+    /* Untuk tampilan 2x2 di perangkat seluler */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Styling untuk bentuk melengkung */
+.grid-item {
+    overflow: hidden; /* Penting agar gambar tidak keluar dari batas */
+}
+.item-1 { border-radius: 0 0 0 50px; } /* Kiri Atas - Tidak melengkung (dibiarkan kotak) */
+.item-2 { border-radius: 0 0 50px 0; } /* Kanan Atas */
+.item-3 { border-radius: 50px 0 0 0; } /* Kiri Bawah */
+.item-4 { border-radius: 0 50px 0 0; } /* Kanan Bawah */
+
+/* Perbaikan untuk tampilan yang lebih dekat ke gambar */
+.item-1, .item-2 { height: 35vh; } /* Tinggi gambar atas */
+.item-3, .item-4 { height: 35vh; } /* Tinggi gambar bawah */
+
+
+/* --- TITLE SECTION --- */
+.title-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+.main-title {
+    font-family: 'Times New Roman', serif; /* Ganti dengan font elegan yang sesuai */
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.title-separator {
+    width: 50px;
+    border: none;
+    border-top: 1px solid #c7923e; /* Garis pemisah warna emas */
+    margin: 0 auto;
+}
+
+/* Media Query untuk Desktop (tampilan 2x2 tetap, tetapi lebih besar) */
+@media (min-width: 768px) {
+    .top-bar {
+        padding: 10px 50px;
+        gap: 30px;
+    }
+    .main-nav {
+        padding: 30px 50px;
+    }
+    .hero-grid {
+        padding: 0 50px;
+        /* Di desktop, kita bisa membuat gambar lebih besar */
+        height: 600px;
+    }
+    .item-1, .item-2, .item-3, .item-4 { 
+        height: 300px; 
+    }
+    .main-title {
+        font-size: 48px;
+    }
+}

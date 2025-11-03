@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twitch</title>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            border-bottom: 4px solid #0078ff;
+            margin: auto;
+        }
+
+        .atas {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ijo {
+            color: #226F41;
+            background-color: #ECF9EF;
+            border: #CEEADC solid 1px;
+            padding: 6px;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .content{
+            margin: 20px;
+        }
+
+        .stat{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            border: #cfcfcf 1px solid;
+            padding: 10px;
+            border-radius: 5px ;
+            	border-style: dashed;
+        }
+        .angka{
+            font-weight: 500;
+        }
+        .stats{
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 60px;
+                        margin-right: 60px;
+                         margin-bottom: 10px;
+        }
+        img{
+            width: 45px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="atas">
+            <div class="ijo">
+                Completed
+            </div>
+          <i class="hgi hgi-stroke hgi-more-vertical more-icon" ></i>
+        </div>
+        <div class="content">
+                    <img src="data:image/png;base64,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" alt="">
+        <h1>Urban Dreams</h1>
+        <span>Live Gaming Spectacle UNveiled</span>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="angka">50.7%</div>
+                <div class="text">Traffic Up</div>
+            </div>
+            <div class="stat">
+                <div class="angka">20.1K</div>
+                <div class="text">New fans</div>
+            </div>
+            <div class="stat">
+                <div class="angka">$100k</div>
+                <div class="text">Donated</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
