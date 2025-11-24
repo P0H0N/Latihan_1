@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.new  {
+    border-color: blue;
+    background-color: blue;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+.p1 {
+    margin-top: 20px;
+    display: flex;
+}
+p {
+    font-size: 13px;
+    display: flex;
+}
+img {
+    margin-top: 10px;
+    float: none;
+    display: inline-block;
+    width: 584px;
+    height: 329px;
+}

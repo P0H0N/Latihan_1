@@ -1,0 +1,30 @@
+h1 {
+    color: coral;
+    font-size: 10px;
+    margin-left: 600px;
+}
+h2 {
+    margin-left: 480px;
+}
+p {
+    margin-top: 25px;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+img {
+    width: 500px;
+    display: flex;
+    margin-left: 370px;
+}
+.yapping {
+    display: block;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.spn {
+    color: gold;
+}
+span {
+    font-size: 20px;
+}
